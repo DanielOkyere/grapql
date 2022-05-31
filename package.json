@@ -4,7 +4,9 @@
   "description": "apollo-grapql fullstackopen",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:frontend": "react-scripts start",
+    "start:backend": "node index.js",
+    "start:dev": "npm run start:backend && npm run start:frontend",
     "dev": "nodemon index.js"
   },
   "keywords": [
@@ -13,9 +15,25 @@
   "author": "DanielOkyere",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.6.5",
     "apollo-server": "^3.8.1",
     "graphql": "^16.5.0",
     "nodemon": "^2.0.16",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
     "uuid": "^8.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
